@@ -4,7 +4,7 @@ import 'package:bdd/views/widgets/add_dialog.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/wish_list.dart';
-import '../../services/database_client.dart';
+import '../../services/database_helper.dart';
 import '../widgets/custom_appbar.dart';
 
 class Home extends StatefulWidget {

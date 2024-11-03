@@ -5,7 +5,7 @@ import 'package:bdd/views/widgets/custom_appbar.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/item.dart';
-import '../../services/database_client.dart';
+import '../../services/database_helper.dart';
 
 class ItemListView extends StatefulWidget {
   final WishList wishList;

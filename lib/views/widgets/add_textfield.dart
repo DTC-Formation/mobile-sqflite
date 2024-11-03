@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class AddTextfield extends StatelessWidget {
   final String hint;
   final TextEditingController controller;
-  TextInputType textInputType;
-  AddTextfield(
+  final TextInputType textInputType;
+  const AddTextfield(
       {super.key,
       required this.hint,
       required this.controller,

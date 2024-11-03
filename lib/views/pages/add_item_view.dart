@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../models/item.dart';
-import '../../services/database_client.dart';
+import '../../services/database_helper.dart';
 
 class AddItemView extends StatefulWidget {
   final int listId;

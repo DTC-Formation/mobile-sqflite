@@ -21,9 +21,8 @@ class DatabaseClient {
   Future<Database> get database async {
     if (_database != null) {
       return database;
-    } else {
-      return await createDatabase();
     }
+    return await createDatabase();
   }
 
   Future<Database> createDatabase() async {
@@ -64,9 +63,9 @@ class DatabaseClient {
     List<Map<String, dynamic>> results = await db.rawQuery(query);
     //List<Map<String, dynamic>> results = await db.query("list");
     List<WishList> lists = [];
-    results.forEach((map) {
+    for (var map in results) {
       lists.add(WishList.fromMap(map));
-    });
+    }
     //ou return results.map((map) => WishList.fromMap(map)).toList();
     return lists;
   }
@@ -113,7 +112,7 @@ class DatabaseClient {
 
     List<Map<String, dynamic>> results =
         await db.query("item", where: "list = ?", whereArgs: [id]);
-
+        
     // ou const query = 'SELECT * FROM item WHERE list = ?';
     // List<Map<String, dynamic>> results = await db.rawQuery(query, [id]);
 
